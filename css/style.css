@@ -49,8 +49,13 @@ header .header__title h3 {
 .exercise .container {}
 
 .exercise ul {
-    display: block;
     background: #5e646b;
+    height: 35rem;
+}
+
+.exercise ul li {
+    width: 50%;
+    height: 20%;
 }
 
 .exercise ul li a {
@@ -64,6 +69,7 @@ header .header__title h3 {
     letter-spacing: 1px;
     overflow: hidden;
     border-radius: 0 !important;
+    text-align: center;
 }
 
 .exercise ul li a.active, .exercise ul li a:hover {
@@ -95,11 +101,9 @@ header .header__title h3 {
     0% {
         transform: translate(1.3rem, -50%);
     }
-
     50% {
         transform: translate(.7rem, -50%);
     }
-
     100% {
         transform: translate(1.3rem, -50%);
     }
@@ -139,8 +143,7 @@ header .header__title h3 {
     border-radius: 0;
 }
 
-.exercise__content .exercise__item .card-header,
-.exercise__content .exercise__item .card-footer {
+.exercise__content .exercise__item .card-header, .exercise__content .exercise__item .card-footer {
     border: none;
     background-color: #8b9299;
     border-radius: 0;
@@ -169,23 +172,23 @@ header .header__title h3 {
     background-color: #bbc2ca;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
 .exercise .exercise__content .exercise__item input,
 .exercise .exercise__content .exercise__item button,
-.exercise .exercise__content .exercise__item select, 
+.exercise .exercise__content .exercise__item select,
 .exercise .exercise__content .exercise__item label,
-.exercise .exercise__top .exercise__create input {
+.exercise .exercise__top .exercise__create input,
+.exercise .exercise__top .exercise__create button {
     font-size: 1.5rem;
 }
 
-.exercise .exercise__content .exercise__item button {
+.exercise .exercise__content .exercise__item button,
+.exercise .exercise__top .exercise__create button {
     /* background: var(--color__1); */
     background: linear-gradient(45deg, var(--color__2), var(--color__1));
-
     border-radius: 0;
     font-weight: 500;
     transition: .4s all;
@@ -195,7 +198,7 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
 }
 
-.exercise .exercise__content .exercise__item button span {
+.exercise .exercise__content .exercise__item button span, .exercise .exercise__top .exercise__create button span {
     position: absolute;
     padding: .375rem .75rem;
     top: 50%;
@@ -206,7 +209,8 @@ input::-webkit-inner-spin-button {
     transform: translateY(-50%);
 }
 
-.exercise .exercise__content .exercise__item button::after {
+.exercise .exercise__content .exercise__item button::after,
+.exercise .exercise__top .exercise__create button::after {
     content: "";
     top: 0;
     left: -20%;
@@ -218,13 +222,13 @@ input::-webkit-inner-spin-button {
     transition: .4s all;
 }
 
-
-
-.exercise .exercise__content .exercise__item button:focus {
+.exercise .exercise__content .exercise__item button:focus,
+.exercise .exercise__top .exercise__create button:focus {
     box-shadow: none;
 }
 
-.exercise .exercise__content .exercise__item button:enabled:hover::after {
+.exercise .exercise__content .exercise__item button:enabled:hover::after,
+.exercise .exercise__top .exercise__create button:hover::after {
     /* background: var(--color__2);
     transition: .4s all; */
     width: 140%;
@@ -240,7 +244,8 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
     text-transform: uppercase;
     line-height: 5rem;
-    border-bottom: 4px solid #343a40;;
+    border-bottom: 4px solid #343a40;
+    ;
 }
 
 .exercise .exercise__create {
@@ -251,7 +256,8 @@ input::-webkit-inner-spin-button {
 }
 
 /* Footer */
-footer > div {
+
+footer>div {
     border-top: 1px solid #5e646b;
 }
 
