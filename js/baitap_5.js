@@ -20,7 +20,7 @@ document.getElementById("btnLastEvenNumber").addEventListener("click", function 
         result = "Kết quả: Số chẵn cuối cùng trong mảng là " + newArray[newArray.length - 1];
     }
     
-    document.getElementById("txtResult__5").innerHTML = result;
+    getEle("txtResult__5").innerHTML = result;
 });
 
 function evenNumberArray(array) {

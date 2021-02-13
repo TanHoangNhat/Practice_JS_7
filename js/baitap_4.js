@@ -17,5 +17,6 @@ document.getElementById("btnFindSmallestNumber").addEventListener("click", funct
         return item;
     });
 
-    document.getElementById("txtResult__4").innerHTML = "Kết quả: Số dương nhỏ nhất trong mảng là " + sortPositiveArray[0];
+    getEle("txtResult__4").innerHTML = "Kết quả: Số dương nhỏ nhất trong mảng là " + sortPositiveArray[0];
+    // document.getElementById("txtResult__4").innerHTML = "Kết quả: Số dương nhỏ nhất trong mảng là " + sortPositiveArray[0];
 });

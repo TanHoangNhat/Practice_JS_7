@@ -19,7 +19,8 @@ document.getElementById("btnSum").addEventListener("click", function () {
 
     var newArray = positiveNumberArray(arrayNumber);
 
-    document.getElementById("txtResult__1").innerHTML = "Kết quả: Tổng các số dương trong mảng là " + sumArrayItem(newArray);
+    // document.getElementById("txtResult__1").innerHTML = "Kết quả: Tổng các số dương trong mảng là " + sumArrayItem(newArray);
+    getEle("txtResult__1").innerHTML = "Kết quả: Tổng các số dương trong mảng là " + sumArrayItem(newArray);
 });
 
 function positiveNumberArray(array) {

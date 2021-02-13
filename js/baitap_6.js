@@ -14,7 +14,7 @@ document.getElementById("btnSwap").addEventListener("click", function () {
     var position_2 = parseInt(getEle("txtPosition_2").value) - 1;
 
     if (position_1 < 0 || position_1 > arrayNumber.length - 1 || position_2 < 0 || position_2 > arrayNumber.length - 1) {
-        document.getElementById("txtResult__6").innerHTML = "Vị trí nhập vào chưa đúng!"
+        getEle("txtResult__6").innerHTML = "Vị trí nhập vào chưa đúng!"
     } else {
         swapArray(arrayNumber, position_1, position_2);
         showArray(arrayNumber);

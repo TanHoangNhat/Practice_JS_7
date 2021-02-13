@@ -14,5 +14,5 @@ document.getElementById("btnFindSmallest").addEventListener("click", function ()
         return item;
     });
 
-    document.getElementById("txtResult__3").innerHTML = "Kết quả: Số nhỏ nhất trong mảng là " + newArray[0];
+    getEle("txtResult__3").innerHTML = "Kết quả: Số nhỏ nhất trong mảng là " + newArray[0];
 });

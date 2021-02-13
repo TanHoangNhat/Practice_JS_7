@@ -12,5 +12,5 @@
 document.getElementById("btnCountPositive").addEventListener("click", function () {
     var newArray = positiveNumberArray(arrayNumber);
 
-    document.getElementById("txtResult__2").innerHTML = "Kết quả: Số lượng số dương trong mảng là " + newArray.length + " số";
+    getEle("txtResult__2").innerHTML = "Kết quả: Số lượng số dương trong mảng là " + newArray.length + " số";
 });
