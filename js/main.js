@@ -18,5 +18,13 @@ document.getElementById("btnAddNumber").addEventListener("click", function () {
 
     arrayNumber.push(number);
 
-    document.getElementById("txtArray").innerHTML = "Mảng hiện có: " + arrayNumber.join(", ");
+    showArray(arrayNumber);
 });
+
+function showArray(array) {
+    document.getElementById("txtArray").innerHTML = "Mảng hiện có: " + array.join(", ");
+}
+
+function getEle(element) {
+    return document.getElementById(element);
+}
