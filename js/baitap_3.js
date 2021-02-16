@@ -9,10 +9,8 @@
  * * * Xuất kết quả ra màn hình
  */
 
-document.getElementById("btnFindSmallest").addEventListener("click", function () {
-    var newArray = sortAscending(arrayNumber).map(function (item) {
-        return item;
-    });
+getEle("btnFindSmallest").addEventListener("click", function () {
+    var newArray = copySortAscending(arrayNumber);
 
     getEle("txtResult__3").innerHTML = "Kết quả: Số nhỏ nhất trong mảng là " + newArray[0];
 });

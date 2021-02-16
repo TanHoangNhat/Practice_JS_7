@@ -15,20 +15,24 @@
  * * * Xuất kết quả ra màn hình
  */
 
-document.getElementById("btnSum").addEventListener("click", function () {
+getEle("btnSum").addEventListener("click", function () {
 
     var newArray = positiveNumberArray(arrayNumber);
 
-    // document.getElementById("txtResult__1").innerHTML = "Kết quả: Tổng các số dương trong mảng là " + sumArrayItem(newArray);
     getEle("txtResult__1").innerHTML = "Kết quả: Tổng các số dương trong mảng là " + sumArrayItem(newArray);
 });
 
 function positiveNumberArray(array) {
-    var positiveArray = array.filter(function (number) {
+    return positiveArray = array.filter(function (number) {
         return number > 0;
     });
+}
 
-    return positiveArray;
+// Hàm lọc ra số âm (phục vụ cho chức năng ở bài tập 10)
+function negativeNumberArray(array) {
+    return negativeArray = array.filter(function (number) {
+        return number < 0;
+    });
 }
 
 function sumArrayItem(array) {

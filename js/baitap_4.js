@@ -10,13 +10,10 @@
  * * * Xuất kết quả ra màn hình
  */
 
-document.getElementById("btnFindSmallestNumber").addEventListener("click", function () {
+getEle("btnFindSmallestNumber").addEventListener("click", function () {
     var positiveArray = positiveNumberArray(arrayNumber);
 
-    var sortPositiveArray = sortAscending(positiveArray).map(function (item) {
-        return item;
-    });
+    var sortPositiveArray = copySortAscending(positiveArray);
 
     getEle("txtResult__4").innerHTML = "Kết quả: Số dương nhỏ nhất trong mảng là " + sortPositiveArray[0];
-    // document.getElementById("txtResult__4").innerHTML = "Kết quả: Số dương nhỏ nhất trong mảng là " + sortPositiveArray[0];
 });

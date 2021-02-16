@@ -9,7 +9,7 @@
  * * * Xuất kết quả ra màn hình
  */
 
-document.getElementById("btnCountPositive").addEventListener("click", function () {
+getEle("btnCountPositive").addEventListener("click", function () {
     var newArray = positiveNumberArray(arrayNumber);
 
     getEle("txtResult__2").innerHTML = "Kết quả: Số lượng số dương trong mảng là " + newArray.length + " số";

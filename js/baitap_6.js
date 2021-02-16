@@ -9,7 +9,7 @@
  * * * Cập nhật lại kết quả đã đổi chỗ, xuất lại lên màn hình
  */
 
-document.getElementById("btnSwap").addEventListener("click", function () {
+getEle("btnSwap").addEventListener("click", function () {
     var position_1 = parseInt(getEle("txtPosition_1").value) - 1;
     var position_2 = parseInt(getEle("txtPosition_2").value) - 1;
 

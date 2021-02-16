@@ -9,7 +9,7 @@
  * * * Xuất kết quả ra màn hình
  */
 
-document.getElementById("btnLastEvenNumber").addEventListener("click", function () {
+getEle("btnLastEvenNumber").addEventListener("click", function () {
     var newArray = evenNumberArray(arrayNumber);
 
     var result = "";
