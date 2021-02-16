@@ -10,11 +10,22 @@
  */
 
 getEle("btnSwap").addEventListener("click", function () {
+    if (arrayNumber.length < 2) {
+        alert("Để đổi chổ, mảng cần ít nhất 2 phần tử! Vui lòng nhập thêm phần tử!");
+        return;
+    }
+
     var position_1 = parseInt(getEle("txtPosition_1").value) - 1;
     var position_2 = parseInt(getEle("txtPosition_2").value) - 1;
 
+    if (isNaN(position_1) || isNaN(position_2)) {
+        alert("Vui lòng nhập đầy đủ vị trí!");
+        return;
+    }
+
     if (position_1 < 0 || position_1 > arrayNumber.length - 1 || position_2 < 0 || position_2 > arrayNumber.length - 1) {
-        getEle("txtResult__6").innerHTML = "Vị trí nhập vào chưa đúng!"
+        alert("Vị trí nhập vào chưa đúng!");
+        return;
     } else {
         swapArray(arrayNumber, position_1, position_2);
         showArray(arrayNumber);

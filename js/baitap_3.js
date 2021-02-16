@@ -10,6 +10,11 @@
  */
 
 getEle("btnFindSmallest").addEventListener("click", function () {
+    if (arrayNumber.length == 0) {
+        alert("Mảng chưa có phần tử! Vui lòng nhập thêm phần tử!");
+        return;
+    }
+
     var newArray = copySortAscending(arrayNumber);
 
     getEle("txtResult__3").innerHTML = "Kết quả: Số nhỏ nhất trong mảng là " + newArray[0];

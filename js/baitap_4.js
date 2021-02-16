@@ -11,6 +11,11 @@
  */
 
 getEle("btnFindSmallestNumber").addEventListener("click", function () {
+    if (arrayNumber.length == 0) {
+        alert("Mảng chưa có phần tử! Vui lòng nhập thêm phần tử!");
+        return;
+    }
+
     var positiveArray = positiveNumberArray(arrayNumber);
 
     var sortPositiveArray = copySortAscending(positiveArray);

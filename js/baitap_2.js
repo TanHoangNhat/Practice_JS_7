@@ -10,6 +10,10 @@
  */
 
 getEle("btnCountPositive").addEventListener("click", function () {
+    if (arrayNumber.length == 0) {
+        alert("Mảng chưa có phần tử! Vui lòng nhập thêm phần tử!");
+        return;
+    }
     var newArray = positiveNumberArray(arrayNumber);
 
     getEle("txtResult__2").innerHTML = "Kết quả: Số lượng số dương trong mảng là " + newArray.length + " số";

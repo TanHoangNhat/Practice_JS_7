@@ -10,12 +10,22 @@
  */
 
 getEle("btnSortAscending").addEventListener("click", function () {
+    if (arrayNumber.length == 0) {
+        alert("Mảng chưa có phần tử! Vui lòng nhập thêm phần tử!");
+        return;
+    }
+
     sortAscending(arrayNumber);
 
     showArray(arrayNumber);
 });
 
 getEle("btnSortDecreasing").addEventListener("click", function () {
+    if (arrayNumber.length == 0) {
+        alert("Mảng chưa có phần tử! Vui lòng nhập thêm phần tử!");
+        return;
+    }
+
     sortDecreasing(arrayNumber);
 
     showArray(arrayNumber);
