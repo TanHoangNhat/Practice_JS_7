@@ -22,14 +22,38 @@ getEle("btnSum").addEventListener("click", function () {
     }
 
     var newArray = positiveNumberArray(arrayNumber);
+    // var newArray = positiveNumberArray_(arrayNumber);
 
     getEle("txtResult__1").innerHTML = "Kết quả: Tổng các số dương trong mảng là " + sumArrayItem(newArray);
 });
 
+function sumArrayItem(array) {
+    var sum = 0;
+    array.forEach(function (item) {
+        sum += item;
+    });
+
+    return sum;
+}
+
+// Hàm lọc ra số dương
 function positiveNumberArray(array) {
     return positiveArray = array.filter(function (number) {
         return number > 0;
     });
+}
+
+// Cách 2: Không sử dụng hàm có sẵn
+function positiveNumberArray_2(array) {
+    var newArray = [];
+
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] > 0) {
+            newArray.push(array[i]);
+        }
+    }
+
+    return newArray;
 }
 
 // Hàm lọc ra số âm (phục vụ cho chức năng ở bài tập 10)
@@ -39,10 +63,15 @@ function negativeNumberArray(array) {
     });
 }
 
-function sumArrayItem(array) {
-    var sum = 0;
-    array.forEach(function (item) {
-        sum += item;
-    });
-    return sum;
+// Cách 2: Không sử dụng hàm có sẵn
+function negativeNumberArray_2(array) {
+    var newArray = [];
+
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] < 0) {
+            newArray.push(array[i]);
+        }
+    }
+
+    return newArray;
 }

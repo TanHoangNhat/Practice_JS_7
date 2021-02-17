@@ -11,20 +11,22 @@
  */
 
 getEle("btnCompare").addEventListener("click", function () {
-    var positiveArray = positiveNumberArray(arrayNumber);
-    var negativeArray = negativeNumberArray(arrayNumber);
-
-    var result = "Kết quả: ";
-
     if (arrayNumber.length == 0) {
         alert("Mảng chưa có phần tử! Vui lòng nhập thêm phần tử!");
         return;
     }
 
+    var positiveArray = positiveNumberArray_2(arrayNumber);
+    var negativeArray = negativeNumberArray_2(arrayNumber);
+
+    var result = "Kết quả: ";
+
     if (positiveArray.length == 0 && negativeArray.length > 0) {
         result += "Mảng chỉ có số âm, không có số dương.";
     } else if (positiveArray.length > 0 && negativeArray.length == 0) {
         result += "Mảng chỉ có số dương, không có số âm.";
+    } else if (positiveArray.length == negativeArray.length) {
+        result += "Số lượng số dương bằng số lượng số âm.";
     } else if (positiveArray.length > negativeArray.length) {
         result += "Số dương nhiều hơn số âm.";
     } else {

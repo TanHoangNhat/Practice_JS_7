@@ -15,7 +15,8 @@ getEle("btnSortAscending").addEventListener("click", function () {
         return;
     }
 
-    sortAscending(arrayNumber);
+    // sortAscending(arrayNumber);
+    sortAscending_2(arrayNumber);
 
     showArray(arrayNumber);
 });
@@ -26,42 +27,46 @@ getEle("btnSortDecreasing").addEventListener("click", function () {
         return;
     }
 
-    sortDecreasing(arrayNumber);
+    // sortDecreasing(arrayNumber);
+    sortDecreasing_2(arrayNumber);
 
     showArray(arrayNumber);
 });
 
-
+// Hàm sắp xếp tăng dần
 function sortAscending(array) {
     return array.sort(function (a, b) {
         return a - b;
     })
 }
 
+// Cách 2: Không sử dụng hàm có sẵn
+// Kết hợp sử dụng hàm swapArrayItem ở bài tập 6
+function sortAscending_2(array) {
+    for (var i = array.length - 1; i >= 0; i--) {
+        for (var j = 0; j < i; j++) {
+            if (array[j] > array[j + 1]) {
+                swapArrayItem(array, j + 1, j);
+            }
+        }
+    }
+}
+
+// Hàm sắp xếp giảm dần
 function sortDecreasing(array) {
     return array.sort(function (a, b) {
         return b - a;
     })
 }
 
-// Hai hàm dưới có chức năng copy sang mảng mới và sort, phục vụ cho các chức năng ở những bài tập khác
-function copySortAscending(array) {
-    // Vì hàm sort tác động trực tiếp lên mảng chính nên cần copy mảng chính ra mảng mới
-    var newArray = array.map(function (item) {
-        return item;
-    });
-
-    return newArray.sort(function (a, b) {
-        return a - b;
-    });
-}
-
-function copySortDecreasing(array) {
-    var newArray = array.map(function (item) {
-        return item;
-    });
-
-    return newArray.sort(function (a, b) {
-        return b - a;
-    });
+// Cách 2: Không sử dụng hàm có sẵn
+// Kết hợp sử dụng hàm swapArrayItem ở bài tập 6
+function sortDecreasing_2(array) {
+    for (var i = array.length - 1; i >= 0; i--) {
+        for (var j = 0; j < i; j++) {
+            if (array[j] < array[j + 1]) {
+                swapArrayItem(array, j + 1, j);
+            }
+        }
+    }
 }

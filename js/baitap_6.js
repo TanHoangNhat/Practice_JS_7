@@ -15,6 +15,7 @@ getEle("btnSwap").addEventListener("click", function () {
         return;
     }
 
+    // Vì người dùng chỉ hiểu vị trí trong thực tế bắt đầu từ 1, còn trong lập trình vị trí bắt đầu từ 0, nên phải -1
     var position_1 = parseInt(getEle("txtPosition_1").value) - 1;
     var position_2 = parseInt(getEle("txtPosition_2").value) - 1;
 
@@ -27,12 +28,12 @@ getEle("btnSwap").addEventListener("click", function () {
         alert("Vị trí nhập vào chưa đúng!");
         return;
     } else {
-        swapArray(arrayNumber, position_1, position_2);
+        swapArrayItem(arrayNumber, position_1, position_2);
         showArray(arrayNumber);
     }
 });
 
-function swapArray(array, position_1, position_2) {
+function swapArrayItem(array, position_1, position_2) {
     var n = 0;
     n = array[position_1];
     array[position_1] = array[position_2];
